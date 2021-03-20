@@ -6,7 +6,7 @@ import javax.persistence.*
 data class Teacher(
     @Id
     @GeneratedValue
-    var id: Int,
+    var id: Long,
     /**
      * Teacher's surname, is used in lessons schedule
      */

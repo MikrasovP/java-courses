@@ -8,7 +8,7 @@ import javax.persistence.Id
 data class LanguageLevel(
     @Id
     @GeneratedValue
-    var id: Int,
+    var id: Long,
     /**
      * For example, Upper-Intermediate
      */

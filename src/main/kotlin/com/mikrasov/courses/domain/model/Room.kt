@@ -8,7 +8,7 @@ import javax.persistence.Id
 data class Room(
     @Id
     @GeneratedValue
-    var id: Int,
+    var id: Long,
     /**
      * Number of room, for example 303, 40B
      */

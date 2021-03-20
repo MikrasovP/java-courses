@@ -8,6 +8,6 @@ import javax.persistence.Id
 data class Language(
     @Id
     @GeneratedValue
-    var id: Int,
+    var id: Long,
     var name: String = "",
 )

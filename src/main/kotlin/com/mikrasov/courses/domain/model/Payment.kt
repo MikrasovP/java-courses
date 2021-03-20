@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne
 data class Payment(
     @Id
     @GeneratedValue
-    var id: Int,
+    var id: Long,
     /**
      * Amount of payed money in cent (100 cents == 1 dollar)
      */

@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne
 data class Lesson(
     @Id
     @GeneratedValue
-    var id: Int,
+    var id: Long,
     var plannedStartTime: Long = 0L,
     @ManyToOne
     var course: Course,

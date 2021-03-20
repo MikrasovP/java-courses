@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne
 data class StudentCoursePayment(
     @Id
     @GeneratedValue
-    var id: Int,
+    var id: Long,
     @ManyToOne
     var student: Student,
     @ManyToOne

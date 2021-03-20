@@ -6,7 +6,7 @@ import javax.persistence.*
 data class Course(
     @Id
     @GeneratedValue
-    var id: Int,
+    var id: Long,
     @ManyToOne
     var language: Language,
     /**
@@ -15,5 +15,4 @@ data class Course(
     var intensity: Int,
     @ManyToOne
     var level: LanguageLevel,
-
     )
