@@ -9,10 +9,12 @@ data class LanguageLevel(
     @Id
     @GeneratedValue
     var id: Long,
+
     /**
      * For example, Upper-Intermediate
      */
     var levelName: String = "",
+
     /**
      * For example, B2
      */

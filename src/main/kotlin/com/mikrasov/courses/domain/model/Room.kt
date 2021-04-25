@@ -9,10 +9,12 @@ data class Room(
     @Id
     @GeneratedValue
     var id: Long,
+
     /**
      * Number of room, for example 303, 40B
      */
     var name: String = "",
+
     /**
      * Amount of students that room is able to contain. Teachers don't counted
      */

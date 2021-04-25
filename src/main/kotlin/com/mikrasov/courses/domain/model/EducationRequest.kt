@@ -6,13 +6,19 @@ import javax.persistence.Id
 import javax.persistence.ManyToOne
 
 @Entity
-data class Lesson(
+data class EducationRequest(
     @Id
     @GeneratedValue
     var id: Long,
 
-    var plannedStartTime: Long = 0L,
+    @ManyToOne
+    var student: Student,
 
     @ManyToOne
-    var course: Course,
+    var language: Language,
+
+    @ManyToOne
+    var languageLevel: LanguageLevel,
+
+    var intensity: Intensity,
 )

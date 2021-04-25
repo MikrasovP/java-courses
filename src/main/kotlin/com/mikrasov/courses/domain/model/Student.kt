@@ -9,6 +9,7 @@ data class Student(
     @Id
     @GeneratedValue
     var id: Long,
+
     var fullName: String = "",
 
 )

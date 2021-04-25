@@ -10,10 +10,12 @@ data class Payment(
     @Id
     @GeneratedValue
     var id: Long,
+
     /**
      * Amount of payed money in cent (100 cents == 1 dollar)
      */
     val amount: Int = 0,
+
     /**
      * Student, whose education was paid
      */

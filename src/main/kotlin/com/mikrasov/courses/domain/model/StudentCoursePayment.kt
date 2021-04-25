@@ -10,14 +10,18 @@ data class StudentCoursePayment(
     @Id
     @GeneratedValue
     var id: Long,
+
     @ManyToOne
     var student: Student,
+
     @ManyToOne
     var course: Course,
+
     /**
      * Amount of lessons that was paid. Updates after student payment
      */
     var paidLessons: Int,
+
     /**
      * Amount of lessons that student have gotten. Increments after lesson have been marked as finished
      */

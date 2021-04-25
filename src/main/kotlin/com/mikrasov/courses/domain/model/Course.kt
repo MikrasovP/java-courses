@@ -7,12 +7,15 @@ data class Course(
     @Id
     @GeneratedValue
     var id: Long,
+
     @ManyToOne
     var language: Language,
-    /**
-     * Preferable amount of classes per week
-     */
-    var intensity: Int,
+
+    var intensity: Intensity = Intensity.TWO,
+
     @ManyToOne
     var level: LanguageLevel,
-    )
+
+    @ManyToMany
+    var students: List<Student> = listOf(),
+)
