@@ -45,6 +45,8 @@ class EducationRequestService(
             students = students.toMutableList()
         )
         courseDao.save(course)
+        educationRequestDao.deleteAll(educationRequests)
+        educationRequestDao.saveAll(educationRequests.map { it.apply { it.handled = true } })
     }
 
 }
