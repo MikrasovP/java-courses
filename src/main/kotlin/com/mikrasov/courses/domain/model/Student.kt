@@ -8,8 +8,7 @@ import javax.persistence.Id
 data class Student(
     @Id
     @GeneratedValue
-    var id: Long,
+    var id: Long = 0,
 
     var fullName: String = "",
-
 )

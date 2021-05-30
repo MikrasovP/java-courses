@@ -6,7 +6,7 @@ import javax.persistence.*
 data class Course(
     @Id
     @GeneratedValue
-    var id: Long,
+    var id: Long = 0L,
 
     @ManyToOne
     var language: Language,
@@ -17,5 +17,5 @@ data class Course(
     var level: LanguageLevel,
 
     @ManyToMany
-    var students: List<Student> = listOf(),
+    var students: MutableList<Student> = mutableListOf(),
 )

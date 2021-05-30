@@ -1,12 +1,15 @@
 package com.mikrasov.courses.domain.model
 
-import javax.persistence.*
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.Id
+import javax.persistence.ManyToMany
 
 @Entity
 data class Teacher(
     @Id
     @GeneratedValue
-    var id: Long,
+    var id: Long = 0,
 
     /**
      * Teacher's surname, is used in lessons schedule
@@ -19,5 +22,5 @@ data class Teacher(
      * List of languages that teacher is able to teach
      */
     @ManyToMany
-    var languages: List<Language> = listOf(),
+    var languages: MutableList<Language> = mutableListOf(),
 )

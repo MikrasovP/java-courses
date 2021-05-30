@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne
 data class EducationRequest(
     @Id
     @GeneratedValue
-    var id: Long,
+    var id: Long = 0,
 
     @ManyToOne
     var student: Student,
@@ -21,4 +21,6 @@ data class EducationRequest(
     var languageLevel: LanguageLevel,
 
     var intensity: Intensity,
+
+    var handled: Boolean = false,
 )
